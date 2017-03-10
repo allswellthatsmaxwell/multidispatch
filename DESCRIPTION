@@ -1,0 +1,9 @@
+Package: multidispatch
+Title: Simplify Multiple-Dispatch Polymorphism
+Version: 0.0.0.9000
+Authors@R: person("Maxwell", "Peterson", email = "allswellthatsmaxwell9@gmail.com", role = c("aut", "cre"))
+Description: Provides functions for simpler multiple dispatch (S4) function definitions.
+Depends: R (>= 3.2.3)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true

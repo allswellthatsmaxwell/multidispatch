@@ -1,0 +1,23 @@
+* On creating the function when it doesn't exist
+** if (!exists(newfn_name)) assign(newfn_name, ?
+20:20 <mson> Given a list of arguments arglist, how can I define a
+             function f such that formals(f) is equal to arglist?
+             So for example if arglist is list(a, b), I want
+             makefunction(arglist, body) to return a function
+             equivalent to function(a, b) { <body> }.
+20:21 *** mson_ JOIN
+20:23 <mson> I guess I just want to splat arglist into the
+             statement function(arglist) { <body> }. But I don't
+             know how.
+20:24 <tdsmith> there's the ... varargs mechanism and do.call
+20:24 <tdsmith> but i'm not sure that satisfies your requirements
+20:25 <mson> I think maybe I want that but not the "do" part.
+20:25 <mson> Maybe it's literally call!
+* Miscellaneous functions that may be helpful
+** alist 
+   ‘alist’ handles its arguments as if they described function
+   arguments.  So the values are not evaluated, and tagged arguments
+   with no value are allowed whereas ‘list’ simply ignores them.
+   ‘alist’ is most often used in conjunction with ‘formals’.
+** as.function
+
